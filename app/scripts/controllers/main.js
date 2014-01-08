@@ -7,6 +7,7 @@ angular.module('insta5App')
     var accessToken = $cookies.accessToken,
       redirectUri = encodeURI('http://127.0.0.1:9000');
     
+    $scope.accessToken = accessToken;
     $scope.instagramAuthUrl = 'http://instagram.com/oauth/authorize/?client_id='+CLIENT_ID+'&redirect_uri='+redirectUri+'&response_type=token';
 
   }]);
