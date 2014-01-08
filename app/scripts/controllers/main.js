@@ -14,7 +14,8 @@ angular.module('insta5App')
 
     if (accessToken) {
       Instagram.setAccessToken(accessToken).getTop5(function (data) {
-        console.log(data);
+        $scope.images = data;
+        $scope.$apply();
       });
     }
 

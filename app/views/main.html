@@ -17,7 +17,15 @@
 </div>
 
 <div class="row marketing">
-  
+  <ul>
+    <li ng-repeat="image in images">
+      <p>
+        <img ng-src="{{image.images.standard_resolution.url}}" />
+      </p>
+      <p>Likes: {{image.likes.count}}</p>
+      <p>{{image.caption.text}}</p>
+    </li>
+  </ul>
 </div>
 
 <div class="footer">
