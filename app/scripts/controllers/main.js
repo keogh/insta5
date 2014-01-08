@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('insta5App')
-  .controller('MainCtrl', ['$scope', '$cookies', 'CLIENT_ID', function ($scope, $cookies, CLIENT_ID) {
+  .controller('MainCtrl', ['$scope', '$cookies', '$cookieStore', 'CLIENT_ID', function ($scope, $cookies, $cookieStore, CLIENT_ID) {
+    window.scope  = $scope;
     window.cookies = $cookies;
+    window.cookieStore = $cookieStore;
 
     var accessToken = $cookies.accessToken,
       redirectUri = encodeURI('http://127.0.0.1:9000');

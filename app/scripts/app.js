@@ -16,6 +16,10 @@ angular.module('insta5App', [
         templateUrl: 'views/main.html',
         controller: 'AccessCtrl'
       })
+      .when('/signout', {
+        templateUrl: 'views/signout.html',
+        controller: 'SignoutCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
