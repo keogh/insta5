@@ -29,7 +29,8 @@ angular.module('insta5App')
 
     function sortItems(items) {
       console.log(items);
-      var media = $filter('orderBy')(items, '-likes.count');
+      var media = $filter('filter')(items, {type: 'image'});
+      media = $filter('orderBy')(items, '-likes.count');
       return media.splice(0, 5);
     }
 
