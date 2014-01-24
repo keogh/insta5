@@ -24,11 +24,10 @@ angular.module('insta5App')
       var url = this.endPoint();
       callback = func;
       this.loading = true;
-      pollingInstagram(url)
+      pollingInstagram(url);
     };
 
     function sortItems(items) {
-      console.log(items);
       var media = $filter('filter')(items, {type: 'image'});
       media = $filter('orderBy')(items, '-likes.count');
       return media.splice(0, 5);
@@ -44,7 +43,6 @@ angular.module('insta5App')
         jsonp: 'callback',
         jsonpCallback: 'jsonpcallback',
         success: function (resp) {
-          console.log(resp);
           items = items.concat(resp.data);
           if (resp.pagination.next_url && count <= 10) { // jshint ignore:line
             pollingInstagram(resp.pagination.next_url, ++count); // jshint ignore:line
@@ -60,5 +58,5 @@ angular.module('insta5App')
         }
       });
       /* jshint ignore:end */
-    };
+    }
   });
