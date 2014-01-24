@@ -2,9 +2,9 @@
 
 angular.module('insta5App')
   .controller('MainCtrl', ['$scope', '$cookies', '$cookieStore', 'CLIENT_ID', 'Instagram', function ($scope, $cookies, $cookieStore, CLIENT_ID, Instagram) {
-    window.scope  = $scope;
-    window.cookies = $cookies;
-    window.cookieStore = $cookieStore;
+    //window.scope  = $scope;
+    //window.cookies = $cookies;
+    //window.cookieStore = $cookieStore;
 
     var accessToken = $cookies.accessToken,
       redirectUri = encodeURI('http://127.0.0.1:9000');
