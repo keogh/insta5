@@ -1,4 +1,4 @@
-#Install Instructions
+# Installation
 
 1. Clone Repository
 
