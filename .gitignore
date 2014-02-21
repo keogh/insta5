@@ -4,3 +4,4 @@ dist
 .sass-cache
 app/bower_components
 app/scripts/constants.js
+npm-debug.log

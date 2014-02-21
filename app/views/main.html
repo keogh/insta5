@@ -7,27 +7,29 @@
       <a class="btn btn-danger" href="/#/signout">Sign out</a>
     </li>
   </ul>
-  <h3 class="text-muted">insta5</h3>
+  <h1 class="logo">insta5</h1>
 </div>
 
 <div class="jumbotron" ng-hide="accessToken">
+  <h2>
+    Wanna know your top 5 Instagram pictures?
+  </h2>
   <p>
-    <a class="btn btn-lg btn-success" ng-href="{{instagramAuthUrl}}">Sign in with Instagram!</a>
+    <a class="btn btn-lg btn-success" ng-href="{{instagramAuthUrl}}">Sign in with Instagram</a>
   </p>
 </div>
 
 <div class="row marketing">
-  <ul>
+  <ul class="top5">
     <li ng-repeat="image in images">
-      <p>
-        <img ng-src="{{image.images.standard_resolution.url}}" />
-      </p>
-      <p>Likes: {{image.likes.count}}</p>
-      <p>{{image.caption.text}}</p>
+      <h2>{{image.caption.text}}</h2>
+      <a href="{{image.link}}"><img ng-src="{{image.images.standard_resolution.url}}" /></a>
+      <p>{{image.likes.count}}</p>
     </li>
   </ul>
 </div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
+  <p>hardcoders &amp; maqueteros</p>
 </div>
+
