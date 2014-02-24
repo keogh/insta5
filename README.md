@@ -1,18 +1,18 @@
 # Installation
 
-1. Clone Repository
+Clone Repository
 
-2. Install npm packages 
+Install npm packages 
 ``` ssh
 $ npm install
 ```
 
-3. Install bower dependencies
+Install bower dependencies
 ``` ssh
 $ bower install
 ```
 
-4. Launch server
+Launch server
 ``` ssh
 $ grunt server
 ```
